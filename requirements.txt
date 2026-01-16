@@ -2,7 +2,6 @@ pyrogram==2.0.106
 tgcrypto
 requests
 pyromod
-aiohttp
 aiofiles
 asyncio
 humanize
@@ -13,3 +12,6 @@ bs4
 httpx[http2]
 img2pdf
 tglogging
+Flask==2.2.2
+gunicorn==20.1.0
+aiohttp==3.8.1
