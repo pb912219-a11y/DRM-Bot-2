@@ -1,11 +1,14 @@
-echo "Cloning Repo...."
+#!/bin/bash
 
-git clone https://github.com/Your_Repo_Name /LazyDeveloper
+echo "Starting DRM Bot..."
 
-cd /LazyDeveloper
+# Go to project directory
+cd "$(dirname "$0")"
 
-pip3 install -r requirements.txt
+# Load .env variables
+if [ -f .env ]; then
+  export $(grep -v '^#' .env | xargs)
+fi
 
-echo "Starting Bot...."
-
-python main.py
+# Run bot
+python3 bot.py
