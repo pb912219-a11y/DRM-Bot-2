@@ -1,0 +1,20 @@
+name: drm-bot-2
+
+services:
+  - name: bot
+    type: worker
+    env: python
+    plan: free
+
+    build:
+      build_command: pip install -r requirements.txt
+
+    run:
+      command: python main.py
+
+    env:
+      BOT_TOKEN: "YOUR_TELEGRAM_BOT_TOKEN"
+      API_ID: "YOUR_API_ID"
+      API_HASH: "YOUR_API_HASH"
+      OWNER_ID: "123456789"
+      AUTH_USERS: "123456789"
